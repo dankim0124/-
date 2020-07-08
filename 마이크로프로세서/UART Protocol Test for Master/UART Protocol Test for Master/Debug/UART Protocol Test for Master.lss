@@ -1,0 +1,1515 @@
+
+UART Protocol Test for Master.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000046  00800100  0000098a  00000a1e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000098a  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000077  00800146  00800146  00000a64  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000a64  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000a94  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000b8  00000000  00000000  00000ad0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000f7f  00000000  00000000  00000b88  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000ad2  00000000  00000000  00001b07  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000953  00000000  00000000  000025d9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000002e4  00000000  00000000  00002f2c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000650  00000000  00000000  00003210  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000ee8  00000000  00000000  00003860  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000b0  00000000  00000000  00004748  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	7b c2       	rjmp	.+1270   	; 0x4fc <__vector_1>
+   6:	00 00       	nop
+   8:	da c2       	rjmp	.+1460   	; 0x5be <__vector_2>
+   a:	00 00       	nop
+   c:	38 c3       	rjmp	.+1648   	; 0x67e <__vector_3>
+   e:	00 00       	nop
+  10:	97 c3       	rjmp	.+1838   	; 0x740 <__vector_4>
+  12:	00 00       	nop
+  14:	f6 c3       	rjmp	.+2028   	; 0x802 <__vector_5>
+  16:	00 00       	nop
+  18:	24 c4       	rjmp	.+2120   	; 0x862 <__vector_6>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	4c c2       	rjmp	.+1176   	; 0x4de <__vector_17>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ea e8       	ldi	r30, 0x8A	; 138
+  a0:	f9 e0       	ldi	r31, 0x09	; 9
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a6 34       	cpi	r26, 0x46	; 70
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	a6 e4       	ldi	r26, 0x46	; 70
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	ad 3b       	cpi	r26, 0xBD	; 189
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	1f d4       	rcall	.+2110   	; 0x902 <main>
+  c4:	60 c4       	rjmp	.+2240   	; 0x986 <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <initialize_FND>:
+unsigned char fnd_sel[4] = {0x08, 0x04, 0x02, 0x01};
+unsigned char fnd[4];
+unsigned char dot = 0x80;
+
+void initialize_FND() {
+	DDRC = 0xFF;
+  c8:	9f ef       	ldi	r25, 0xFF	; 255
+  ca:	94 bb       	out	0x14, r25	; 20
+	DDRG = 0x0F;
+  cc:	8f e0       	ldi	r24, 0x0F	; 15
+  ce:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <__TEXT_REGION_LENGTH__+0x7e0064>
+	PORTG = 0x0F;
+  d2:	e5 e6       	ldi	r30, 0x65	; 101
+  d4:	f0 e0       	ldi	r31, 0x00	; 0
+  d6:	80 83       	st	Z, r24
+	
+	// Turn ON
+	PORTC = 0b11111111;		// ON
+  d8:	95 bb       	out	0x15, r25	; 21
+	PORTG = 0b00001111;		// 모든 FND 선택
+  da:	80 83       	st	Z, r24
+	
+	// Turn OFF
+	PORTC = 0b00000000;		// ON
+  dc:	15 ba       	out	0x15, r1	; 21
+	PORTG = 0b00001111;		// 모든 FND 선택
+  de:	80 83       	st	Z, r24
+  e0:	08 95       	ret
+
+000000e2 <FND_show_number>:
+}
+
+/* FND로 숫자를 출력함 */
+void FND_show_number(unsigned short number) {
+  e2:	cf 93       	push	r28
+  e4:	df 93       	push	r29
+  e6:	ac 01       	movw	r20, r24
+	
+	int i;
+	// unsigned short _count = 0;
+	
+	fnd[0] = digit[number / 1000];
+  e8:	c2 e5       	ldi	r28, 0x52	; 82
+  ea:	d1 e0       	ldi	r29, 0x01	; 1
+  ec:	9c 01       	movw	r18, r24
+  ee:	36 95       	lsr	r19
+  f0:	27 95       	ror	r18
+  f2:	36 95       	lsr	r19
+  f4:	27 95       	ror	r18
+  f6:	36 95       	lsr	r19
+  f8:	27 95       	ror	r18
+  fa:	a5 ec       	ldi	r26, 0xC5	; 197
+  fc:	b0 e2       	ldi	r27, 0x20	; 32
+  fe:	34 d4       	rcall	.+2152   	; 0x968 <__umulhisi3>
+ 100:	92 95       	swap	r25
+ 102:	82 95       	swap	r24
+ 104:	8f 70       	andi	r24, 0x0F	; 15
+ 106:	89 27       	eor	r24, r25
+ 108:	9f 70       	andi	r25, 0x0F	; 15
+ 10a:	89 27       	eor	r24, r25
+ 10c:	fc 01       	movw	r30, r24
+ 10e:	ec 5f       	subi	r30, 0xFC	; 252
+ 110:	fe 4f       	sbci	r31, 0xFE	; 254
+ 112:	20 81       	ld	r18, Z
+ 114:	28 83       	st	Y, r18
+	fnd[1] = digit[(number % 1000) / 100];
+ 116:	68 ee       	ldi	r22, 0xE8	; 232
+ 118:	73 e0       	ldi	r23, 0x03	; 3
+ 11a:	86 9f       	mul	r24, r22
+ 11c:	90 01       	movw	r18, r0
+ 11e:	87 9f       	mul	r24, r23
+ 120:	30 0d       	add	r19, r0
+ 122:	96 9f       	mul	r25, r22
+ 124:	30 0d       	add	r19, r0
+ 126:	11 24       	eor	r1, r1
+ 128:	ca 01       	movw	r24, r20
+ 12a:	82 1b       	sub	r24, r18
+ 12c:	93 0b       	sbc	r25, r19
+ 12e:	9c 01       	movw	r18, r24
+ 130:	36 95       	lsr	r19
+ 132:	27 95       	ror	r18
+ 134:	36 95       	lsr	r19
+ 136:	27 95       	ror	r18
+ 138:	ab e7       	ldi	r26, 0x7B	; 123
+ 13a:	b4 e1       	ldi	r27, 0x14	; 20
+ 13c:	15 d4       	rcall	.+2090   	; 0x968 <__umulhisi3>
+ 13e:	96 95       	lsr	r25
+ 140:	87 95       	ror	r24
+ 142:	fc 01       	movw	r30, r24
+ 144:	ec 5f       	subi	r30, 0xFC	; 252
+ 146:	fe 4f       	sbci	r31, 0xFE	; 254
+ 148:	80 81       	ld	r24, Z
+ 14a:	89 83       	std	Y+1, r24	; 0x01
+	fnd[2] = digit[(number % 100) / 10];
+ 14c:	9a 01       	movw	r18, r20
+ 14e:	36 95       	lsr	r19
+ 150:	27 95       	ror	r18
+ 152:	36 95       	lsr	r19
+ 154:	27 95       	ror	r18
+ 156:	08 d4       	rcall	.+2064   	; 0x968 <__umulhisi3>
+ 158:	96 95       	lsr	r25
+ 15a:	87 95       	ror	r24
+ 15c:	64 e6       	ldi	r22, 0x64	; 100
+ 15e:	68 9f       	mul	r22, r24
+ 160:	90 01       	movw	r18, r0
+ 162:	69 9f       	mul	r22, r25
+ 164:	30 0d       	add	r19, r0
+ 166:	11 24       	eor	r1, r1
+ 168:	ca 01       	movw	r24, r20
+ 16a:	82 1b       	sub	r24, r18
+ 16c:	93 0b       	sbc	r25, r19
+ 16e:	9c 01       	movw	r18, r24
+ 170:	ad ec       	ldi	r26, 0xCD	; 205
+ 172:	bc ec       	ldi	r27, 0xCC	; 204
+ 174:	f9 d3       	rcall	.+2034   	; 0x968 <__umulhisi3>
+ 176:	96 95       	lsr	r25
+ 178:	87 95       	ror	r24
+ 17a:	96 95       	lsr	r25
+ 17c:	87 95       	ror	r24
+ 17e:	96 95       	lsr	r25
+ 180:	87 95       	ror	r24
+ 182:	fc 01       	movw	r30, r24
+ 184:	ec 5f       	subi	r30, 0xFC	; 252
+ 186:	fe 4f       	sbci	r31, 0xFE	; 254
+ 188:	80 81       	ld	r24, Z
+	fnd[3] = digit[(number % 10)];
+ 18a:	8a 83       	std	Y+2, r24	; 0x02
+ 18c:	9a 01       	movw	r18, r20
+ 18e:	ec d3       	rcall	.+2008   	; 0x968 <__umulhisi3>
+ 190:	96 95       	lsr	r25
+ 192:	87 95       	ror	r24
+ 194:	96 95       	lsr	r25
+ 196:	87 95       	ror	r24
+ 198:	96 95       	lsr	r25
+ 19a:	87 95       	ror	r24
+ 19c:	9c 01       	movw	r18, r24
+ 19e:	22 0f       	add	r18, r18
+ 1a0:	33 1f       	adc	r19, r19
+ 1a2:	88 0f       	add	r24, r24
+ 1a4:	99 1f       	adc	r25, r25
+ 1a6:	88 0f       	add	r24, r24
+ 1a8:	99 1f       	adc	r25, r25
+ 1aa:	88 0f       	add	r24, r24
+ 1ac:	99 1f       	adc	r25, r25
+ 1ae:	82 0f       	add	r24, r18
+ 1b0:	93 1f       	adc	r25, r19
+ 1b2:	48 1b       	sub	r20, r24
+ 1b4:	59 0b       	sbc	r21, r25
+ 1b6:	fa 01       	movw	r30, r20
+ 1b8:	ec 5f       	subi	r30, 0xFC	; 252
+ 1ba:	fe 4f       	sbci	r31, 0xFE	; 254
+ 1bc:	80 81       	ld	r24, Z
+ 1be:	8b 83       	std	Y+3, r24	; 0x03
+ 1c0:	fe 01       	movw	r30, r28
+ 1c2:	a0 e0       	ldi	r26, 0x00	; 0
+ 1c4:	b1 e0       	ldi	r27, 0x01	; 1
+ 1c6:	26 e5       	ldi	r18, 0x56	; 86
+ 1c8:	31 e0       	ldi	r19, 0x01	; 1
+	for(i = 0; i < 4; i++) {
+		PORTC = fnd[i];
+		PORTG = fnd_sel[i];
+ 1ca:	c5 e6       	ldi	r28, 0x65	; 101
+ 1cc:	d0 e0       	ldi	r29, 0x00	; 0
+	fnd[0] = digit[number / 1000];
+	fnd[1] = digit[(number % 1000) / 100];
+	fnd[2] = digit[(number % 100) / 10];
+	fnd[3] = digit[(number % 10)];
+	for(i = 0; i < 4; i++) {
+		PORTC = fnd[i];
+ 1ce:	81 91       	ld	r24, Z+
+ 1d0:	85 bb       	out	0x15, r24	; 21
+		PORTG = fnd_sel[i];
+ 1d2:	8d 91       	ld	r24, X+
+ 1d4:	88 83       	st	Y, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1d6:	8f e3       	ldi	r24, 0x3F	; 63
+ 1d8:	9f e1       	ldi	r25, 0x1F	; 31
+ 1da:	01 97       	sbiw	r24, 0x01	; 1
+ 1dc:	f1 f7       	brne	.-4      	; 0x1da <FND_show_number+0xf8>
+ 1de:	00 c0       	rjmp	.+0      	; 0x1e0 <FND_show_number+0xfe>
+ 1e0:	00 00       	nop
+	
+	fnd[0] = digit[number / 1000];
+	fnd[1] = digit[(number % 1000) / 100];
+	fnd[2] = digit[(number % 100) / 10];
+	fnd[3] = digit[(number % 10)];
+	for(i = 0; i < 4; i++) {
+ 1e2:	e2 17       	cp	r30, r18
+ 1e4:	f3 07       	cpc	r31, r19
+ 1e6:	99 f7       	brne	.-26     	; 0x1ce <FND_show_number+0xec>
+		PORTC = fnd[i];
+		PORTG = fnd_sel[i];
+		_delay_ms(2);	// 2ms * 4회 = 8ms => 8ms 당 count 1 증가 => count == 125 일 때, 1초 증가
+	}
+ 1e8:	df 91       	pop	r29
+ 1ea:	cf 91       	pop	r28
+ 1ec:	08 95       	ret
+
+000001ee <make_airplane_correct_time_array>:
+	if(a > b) {
+		return (a - b);
+	} else {
+		return (b - a);
+	}
+}
+ 1ee:	e9 e5       	ldi	r30, 0x59	; 89
+ 1f0:	f1 e0       	ldi	r31, 0x01	; 1
+ 1f2:	8a e6       	ldi	r24, 0x6A	; 106
+ 1f4:	9d e1       	ldi	r25, 0x1D	; 29
+ 1f6:	91 83       	std	Z+1, r25	; 0x01
+ 1f8:	80 83       	st	Z, r24
+ 1fa:	86 e0       	ldi	r24, 0x06	; 6
+ 1fc:	9f e1       	ldi	r25, 0x1F	; 31
+ 1fe:	93 83       	std	Z+3, r25	; 0x03
+ 200:	82 83       	std	Z+2, r24	; 0x02
+ 202:	8f e8       	ldi	r24, 0x8F	; 143
+ 204:	9f e1       	ldi	r25, 0x1F	; 31
+ 206:	95 83       	std	Z+5, r25	; 0x05
+ 208:	84 83       	std	Z+4, r24	; 0x04
+ 20a:	82 ea       	ldi	r24, 0xA2	; 162
+ 20c:	90 e2       	ldi	r25, 0x20	; 32
+ 20e:	97 83       	std	Z+7, r25	; 0x07
+ 210:	86 83       	std	Z+6, r24	; 0x06
+ 212:	85 eb       	ldi	r24, 0xB5	; 181
+ 214:	91 e2       	ldi	r25, 0x21	; 33
+ 216:	91 87       	std	Z+9, r25	; 0x09
+ 218:	80 87       	std	Z+8, r24	; 0x08
+ 21a:	88 ec       	ldi	r24, 0xC8	; 200
+ 21c:	92 e2       	ldi	r25, 0x22	; 34
+ 21e:	93 87       	std	Z+11, r25	; 0x0b
+ 220:	82 87       	std	Z+10, r24	; 0x0a
+ 222:	8b ed       	ldi	r24, 0xDB	; 219
+ 224:	93 e2       	ldi	r25, 0x23	; 35
+ 226:	95 87       	std	Z+13, r25	; 0x0d
+ 228:	84 87       	std	Z+12, r24	; 0x0c
+ 22a:	81 e0       	ldi	r24, 0x01	; 1
+ 22c:	96 e2       	ldi	r25, 0x26	; 38
+ 22e:	97 87       	std	Z+15, r25	; 0x0f
+ 230:	86 87       	std	Z+14, r24	; 0x0e
+ 232:	84 e1       	ldi	r24, 0x14	; 20
+ 234:	97 e2       	ldi	r25, 0x27	; 39
+ 236:	91 8b       	std	Z+17, r25	; 0x11
+ 238:	80 8b       	std	Z+16, r24	; 0x10
+ 23a:	87 e2       	ldi	r24, 0x27	; 39
+ 23c:	98 e2       	ldi	r25, 0x28	; 40
+ 23e:	93 8b       	std	Z+19, r25	; 0x13
+ 240:	82 8b       	std	Z+18, r24	; 0x12
+ 242:	8d e4       	ldi	r24, 0x4D	; 77
+ 244:	9a e2       	ldi	r25, 0x2A	; 42
+ 246:	95 8b       	std	Z+21, r25	; 0x15
+ 248:	84 8b       	std	Z+20, r24	; 0x14
+ 24a:	80 e6       	ldi	r24, 0x60	; 96
+ 24c:	9b e2       	ldi	r25, 0x2B	; 43
+ 24e:	97 8b       	std	Z+23, r25	; 0x17
+ 250:	86 8b       	std	Z+22, r24	; 0x16
+ 252:	83 e7       	ldi	r24, 0x73	; 115
+ 254:	9c e2       	ldi	r25, 0x2C	; 44
+ 256:	91 8f       	std	Z+25, r25	; 0x19
+ 258:	80 8f       	std	Z+24, r24	; 0x18
+ 25a:	89 e9       	ldi	r24, 0x99	; 153
+ 25c:	9e e2       	ldi	r25, 0x2E	; 46
+ 25e:	93 8f       	std	Z+27, r25	; 0x1b
+ 260:	82 8f       	std	Z+26, r24	; 0x1a
+ 262:	85 e3       	ldi	r24, 0x35	; 53
+ 264:	90 e3       	ldi	r25, 0x30	; 48
+ 266:	95 8f       	std	Z+29, r25	; 0x1d
+ 268:	84 8f       	std	Z+28, r24	; 0x1c
+ 26a:	8e eb       	ldi	r24, 0xBE	; 190
+ 26c:	90 e3       	ldi	r25, 0x30	; 48
+ 26e:	97 8f       	std	Z+31, r25	; 0x1f
+ 270:	86 8f       	std	Z+30, r24	; 0x1e
+ 272:	81 ed       	ldi	r24, 0xD1	; 209
+ 274:	91 e3       	ldi	r25, 0x31	; 49
+ 276:	91 a3       	std	Z+33, r25	; 0x21
+ 278:	80 a3       	std	Z+32, r24	; 0x20
+ 27a:	84 ee       	ldi	r24, 0xE4	; 228
+ 27c:	92 e3       	ldi	r25, 0x32	; 50
+ 27e:	93 a3       	std	Z+35, r25	; 0x23
+ 280:	82 a3       	std	Z+34, r24	; 0x22
+ 282:	87 ef       	ldi	r24, 0xF7	; 247
+ 284:	93 e3       	ldi	r25, 0x33	; 51
+ 286:	95 a3       	std	Z+37, r25	; 0x25
+ 288:	84 a3       	std	Z+36, r24	; 0x24
+ 28a:	8a e0       	ldi	r24, 0x0A	; 10
+ 28c:	95 e3       	ldi	r25, 0x35	; 53
+ 28e:	97 a3       	std	Z+39, r25	; 0x27
+ 290:	86 a3       	std	Z+38, r24	; 0x26
+ 292:	80 e3       	ldi	r24, 0x30	; 48
+ 294:	97 e3       	ldi	r25, 0x37	; 55
+ 296:	91 a7       	std	Z+41, r25	; 0x29
+ 298:	80 a7       	std	Z+40, r24	; 0x28
+ 29a:	83 e4       	ldi	r24, 0x43	; 67
+ 29c:	98 e3       	ldi	r25, 0x38	; 56
+ 29e:	93 a7       	std	Z+43, r25	; 0x2b
+ 2a0:	82 a7       	std	Z+42, r24	; 0x2a
+ 2a2:	86 e5       	ldi	r24, 0x56	; 86
+ 2a4:	99 e3       	ldi	r25, 0x39	; 57
+ 2a6:	95 a7       	std	Z+45, r25	; 0x2d
+ 2a8:	84 a7       	std	Z+44, r24	; 0x2c
+ 2aa:	89 e6       	ldi	r24, 0x69	; 105
+ 2ac:	9a e3       	ldi	r25, 0x3A	; 58
+ 2ae:	97 a7       	std	Z+47, r25	; 0x2f
+ 2b0:	86 a7       	std	Z+46, r24	; 0x2e
+ 2b2:	8c e7       	ldi	r24, 0x7C	; 124
+ 2b4:	9b e3       	ldi	r25, 0x3B	; 59
+ 2b6:	91 ab       	std	Z+49, r25	; 0x31
+ 2b8:	80 ab       	std	Z+48, r24	; 0x30
+ 2ba:	88 ef       	ldi	r24, 0xF8	; 248
+ 2bc:	90 e5       	ldi	r25, 0x50	; 80
+ 2be:	93 ab       	std	Z+51, r25	; 0x33
+ 2c0:	82 ab       	std	Z+50, r24	; 0x32
+ 2c2:	84 e9       	ldi	r24, 0x94	; 148
+ 2c4:	92 e5       	ldi	r25, 0x52	; 82
+ 2c6:	95 ab       	std	Z+53, r25	; 0x35
+ 2c8:	84 ab       	std	Z+52, r24	; 0x34
+ 2ca:	8d e1       	ldi	r24, 0x1D	; 29
+ 2cc:	93 e5       	ldi	r25, 0x53	; 83
+ 2ce:	97 ab       	std	Z+55, r25	; 0x37
+ 2d0:	86 ab       	std	Z+54, r24	; 0x36
+ 2d2:	80 e3       	ldi	r24, 0x30	; 48
+ 2d4:	94 e5       	ldi	r25, 0x54	; 84
+ 2d6:	91 af       	std	Z+57, r25	; 0x39
+ 2d8:	80 af       	std	Z+56, r24	; 0x38
+ 2da:	83 e4       	ldi	r24, 0x43	; 67
+ 2dc:	95 e5       	ldi	r25, 0x55	; 85
+ 2de:	93 af       	std	Z+59, r25	; 0x3b
+ 2e0:	82 af       	std	Z+58, r24	; 0x3a
+ 2e2:	86 e5       	ldi	r24, 0x56	; 86
+ 2e4:	96 e5       	ldi	r25, 0x56	; 86
+ 2e6:	95 af       	std	Z+61, r25	; 0x3d
+ 2e8:	84 af       	std	Z+60, r24	; 0x3c
+ 2ea:	89 e6       	ldi	r24, 0x69	; 105
+ 2ec:	97 e5       	ldi	r25, 0x57	; 87
+ 2ee:	97 af       	std	Z+63, r25	; 0x3f
+ 2f0:	86 af       	std	Z+62, r24	; 0x3e
+ 2f2:	8f e8       	ldi	r24, 0x8F	; 143
+ 2f4:	99 e5       	ldi	r25, 0x59	; 89
+ 2f6:	90 93 9a 01 	sts	0x019A, r25	; 0x80019a <correct_msec_time+0x41>
+ 2fa:	80 93 99 01 	sts	0x0199, r24	; 0x800199 <correct_msec_time+0x40>
+ 2fe:	82 ea       	ldi	r24, 0xA2	; 162
+ 300:	9a e5       	ldi	r25, 0x5A	; 90
+ 302:	90 93 9c 01 	sts	0x019C, r25	; 0x80019c <correct_msec_time+0x43>
+ 306:	80 93 9b 01 	sts	0x019B, r24	; 0x80019b <correct_msec_time+0x42>
+ 30a:	85 eb       	ldi	r24, 0xB5	; 181
+ 30c:	9b e5       	ldi	r25, 0x5B	; 91
+ 30e:	90 93 9e 01 	sts	0x019E, r25	; 0x80019e <correct_msec_time+0x45>
+ 312:	80 93 9d 01 	sts	0x019D, r24	; 0x80019d <correct_msec_time+0x44>
+ 316:	8b ed       	ldi	r24, 0xDB	; 219
+ 318:	9d e5       	ldi	r25, 0x5D	; 93
+ 31a:	90 93 a0 01 	sts	0x01A0, r25	; 0x8001a0 <correct_msec_time+0x47>
+ 31e:	80 93 9f 01 	sts	0x019F, r24	; 0x80019f <correct_msec_time+0x46>
+ 322:	8e ee       	ldi	r24, 0xEE	; 238
+ 324:	9e e5       	ldi	r25, 0x5E	; 94
+ 326:	90 93 a2 01 	sts	0x01A2, r25	; 0x8001a2 <correct_msec_time+0x49>
+ 32a:	80 93 a1 01 	sts	0x01A1, r24	; 0x8001a1 <correct_msec_time+0x48>
+ 32e:	81 e0       	ldi	r24, 0x01	; 1
+ 330:	90 e6       	ldi	r25, 0x60	; 96
+ 332:	90 93 a4 01 	sts	0x01A4, r25	; 0x8001a4 <correct_msec_time+0x4b>
+ 336:	80 93 a3 01 	sts	0x01A3, r24	; 0x8001a3 <correct_msec_time+0x4a>
+ 33a:	87 e2       	ldi	r24, 0x27	; 39
+ 33c:	92 e6       	ldi	r25, 0x62	; 98
+ 33e:	90 93 a6 01 	sts	0x01A6, r25	; 0x8001a6 <correct_msec_time+0x4d>
+ 342:	80 93 a5 01 	sts	0x01A5, r24	; 0x8001a5 <correct_msec_time+0x4c>
+ 346:	83 ec       	ldi	r24, 0xC3	; 195
+ 348:	93 e6       	ldi	r25, 0x63	; 99
+ 34a:	90 93 a8 01 	sts	0x01A8, r25	; 0x8001a8 <correct_msec_time+0x4f>
+ 34e:	80 93 a7 01 	sts	0x01A7, r24	; 0x8001a7 <correct_msec_time+0x4e>
+ 352:	8c e4       	ldi	r24, 0x4C	; 76
+ 354:	94 e6       	ldi	r25, 0x64	; 100
+ 356:	90 93 aa 01 	sts	0x01AA, r25	; 0x8001aa <correct_msec_time+0x51>
+ 35a:	80 93 a9 01 	sts	0x01A9, r24	; 0x8001a9 <correct_msec_time+0x50>
+ 35e:	8f e5       	ldi	r24, 0x5F	; 95
+ 360:	95 e6       	ldi	r25, 0x65	; 101
+ 362:	90 93 ac 01 	sts	0x01AC, r25	; 0x8001ac <correct_msec_time+0x53>
+ 366:	80 93 ab 01 	sts	0x01AB, r24	; 0x8001ab <correct_msec_time+0x52>
+ 36a:	82 e7       	ldi	r24, 0x72	; 114
+ 36c:	96 e6       	ldi	r25, 0x66	; 102
+ 36e:	90 93 ae 01 	sts	0x01AE, r25	; 0x8001ae <correct_msec_time+0x55>
+ 372:	80 93 ad 01 	sts	0x01AD, r24	; 0x8001ad <correct_msec_time+0x54>
+ 376:	85 e8       	ldi	r24, 0x85	; 133
+ 378:	97 e6       	ldi	r25, 0x67	; 103
+ 37a:	90 93 b0 01 	sts	0x01B0, r25	; 0x8001b0 <correct_msec_time+0x57>
+ 37e:	80 93 af 01 	sts	0x01AF, r24	; 0x8001af <correct_msec_time+0x56>
+ 382:	88 e9       	ldi	r24, 0x98	; 152
+ 384:	98 e6       	ldi	r25, 0x68	; 104
+ 386:	90 93 b2 01 	sts	0x01B2, r25	; 0x8001b2 <correct_msec_time+0x59>
+ 38a:	80 93 b1 01 	sts	0x01B1, r24	; 0x8001b1 <correct_msec_time+0x58>
+ 38e:	8e eb       	ldi	r24, 0xBE	; 190
+ 390:	9a e6       	ldi	r25, 0x6A	; 106
+ 392:	90 93 b4 01 	sts	0x01B4, r25	; 0x8001b4 <correct_msec_time+0x5b>
+ 396:	80 93 b3 01 	sts	0x01B3, r24	; 0x8001b3 <correct_msec_time+0x5a>
+ 39a:	81 ed       	ldi	r24, 0xD1	; 209
+ 39c:	9b e6       	ldi	r25, 0x6B	; 107
+ 39e:	90 93 b6 01 	sts	0x01B6, r25	; 0x8001b6 <correct_msec_time+0x5d>
+ 3a2:	80 93 b5 01 	sts	0x01B5, r24	; 0x8001b5 <correct_msec_time+0x5c>
+ 3a6:	84 ee       	ldi	r24, 0xE4	; 228
+ 3a8:	9c e6       	ldi	r25, 0x6C	; 108
+ 3aa:	90 93 b8 01 	sts	0x01B8, r25	; 0x8001b8 <correct_msec_time+0x5f>
+ 3ae:	80 93 b7 01 	sts	0x01B7, r24	; 0x8001b7 <correct_msec_time+0x5e>
+ 3b2:	87 ef       	ldi	r24, 0xF7	; 247
+ 3b4:	9d e6       	ldi	r25, 0x6D	; 109
+ 3b6:	90 93 ba 01 	sts	0x01BA, r25	; 0x8001ba <correct_msec_time+0x61>
+ 3ba:	80 93 b9 01 	sts	0x01B9, r24	; 0x8001b9 <correct_msec_time+0x60>
+ 3be:	8a e0       	ldi	r24, 0x0A	; 10
+ 3c0:	9f e6       	ldi	r25, 0x6F	; 111
+ 3c2:	90 93 bc 01 	sts	0x01BC, r25	; 0x8001bc <correct_msec_time+0x63>
+ 3c6:	80 93 bb 01 	sts	0x01BB, r24	; 0x8001bb <correct_msec_time+0x62>
+ 3ca:	08 95       	ret
+
+000003cc <initialize_variables>:
+ 3cc:	10 92 51 01 	sts	0x0151, r1	; 0x800151 <msec+0x1>
+ 3d0:	10 92 50 01 	sts	0x0150, r1	; 0x800150 <msec>
+ 3d4:	10 92 4f 01 	sts	0x014F, r1	; 0x80014f <score+0x1>
+ 3d8:	10 92 4e 01 	sts	0x014E, r1	; 0x80014e <score>
+ 3dc:	10 92 4b 01 	sts	0x014B, r1	; 0x80014b <_msec_memory+0x1>
+ 3e0:	10 92 4a 01 	sts	0x014A, r1	; 0x80014a <_msec_memory>
+ 3e4:	10 92 4d 01 	sts	0x014D, r1	; 0x80014d <_notes_index_count+0x1>
+ 3e8:	10 92 4c 01 	sts	0x014C, r1	; 0x80014c <_notes_index_count>
+ 3ec:	10 92 57 01 	sts	0x0157, r1	; 0x800157 <test_FND+0x1>
+ 3f0:	10 92 56 01 	sts	0x0156, r1	; 0x800156 <test_FND>
+ 3f4:	10 92 49 01 	sts	0x0149, r1	; 0x800149 <_menu_memory_msec+0x1>
+ 3f8:	10 92 48 01 	sts	0x0148, r1	; 0x800148 <_menu_memory_msec>
+ 3fc:	10 92 47 01 	sts	0x0147, r1	; 0x800147 <__data_end+0x1>
+ 400:	10 92 46 01 	sts	0x0146, r1	; 0x800146 <__data_end>
+ 404:	f4 ce       	rjmp	.-536    	; 0x1ee <make_airplane_correct_time_array>
+ 406:	08 95       	ret
+
+00000408 <SPI_Masterinit>:
+
+/* SPI 통신을 위한 초기화과정 */
+void SPI_Masterinit(void){
+	DDRB|=0x17;	//	0x17 = 0b00010111
+ 408:	87 b3       	in	r24, 0x17	; 23
+ 40a:	87 61       	ori	r24, 0x17	; 23
+ 40c:	87 bb       	out	0x17, r24	; 23
+	SPCR|=0xD0;	//	0xD0 = 0b11010000
+ 40e:	8d b1       	in	r24, 0x0d	; 13
+ 410:	80 6d       	ori	r24, 0xD0	; 208
+ 412:	8d b9       	out	0x0d, r24	; 13
+	SS_1;
+ 414:	c4 9a       	sbi	0x18, 4	; 24
+ 416:	08 95       	ret
+
+00000418 <SPI_TX>:
+	
+}
+
+/* 실제로 SPI 전송을 하는 함수 */
+void SPI_TX(unsigned char data){
+	SS_0;
+ 418:	c4 98       	cbi	0x18, 4	; 24
+	SPCR&=~0x80;	// 0x80 = 0b10000000 -> ~0x80 = 0b01111111
+ 41a:	6f 98       	cbi	0x0d, 7	; 13
+	SPDR=data;
+ 41c:	8f b9       	out	0x0f, r24	; 15
+	while(!(SPSR&0x80));	// 0x80 = 0b10000000
+ 41e:	77 9b       	sbis	0x0e, 7	; 14
+ 420:	fe cf       	rjmp	.-4      	; 0x41e <SPI_TX+0x6>
+	SPCR|=0x80;	// 0x80 = 0b10000000 -> ~0x10 = 0b11101111
+ 422:	6f 9a       	sbi	0x0d, 7	; 13
+ 424:	08 95       	ret
+
+00000426 <find_index_in_array>:
+}
+
+/* 현재 시간과 노트의 시간 중 근접한 시간을 찾음. */
+short find_index_in_array(unsigned int now_time) {
+	for(short idx = 0; idx < 50; idx++) {
+		if(_abs_minus(now_time, correct_msec_time[idx]) <= tolerance_ms) {
+ 426:	60 91 0e 01 	lds	r22, 0x010E	; 0x80010e <tolerance_ms>
+ 42a:	70 91 0f 01 	lds	r23, 0x010F	; 0x80010f <tolerance_ms+0x1>
+ 42e:	e9 e5       	ldi	r30, 0x59	; 89
+ 430:	f1 e0       	ldi	r31, 0x01	; 1
+	SPCR|=0x80;	// 0x80 = 0b10000000 -> ~0x10 = 0b11101111
+}
+
+/* 현재 시간과 노트의 시간 중 근접한 시간을 찾음. */
+short find_index_in_array(unsigned int now_time) {
+	for(short idx = 0; idx < 50; idx++) {
+ 432:	40 e0       	ldi	r20, 0x00	; 0
+ 434:	50 e0       	ldi	r21, 0x00	; 0
+		if(_abs_minus(now_time, correct_msec_time[idx]) <= tolerance_ms) {
+ 436:	21 91       	ld	r18, Z+
+ 438:	31 91       	ld	r19, Z+
+	}
+	*/
+}
+
+unsigned int _abs_minus(int a, int b) {
+	if(a > b) {
+ 43a:	28 17       	cp	r18, r24
+ 43c:	39 07       	cpc	r19, r25
+ 43e:	2c f4       	brge	.+10     	; 0x44a <find_index_in_array+0x24>
+		return (a - b);
+ 440:	dc 01       	movw	r26, r24
+ 442:	a2 1b       	sub	r26, r18
+ 444:	b3 0b       	sbc	r27, r19
+ 446:	9d 01       	movw	r18, r26
+ 448:	02 c0       	rjmp	.+4      	; 0x44e <find_index_in_array+0x28>
+	} else {
+		return (b - a);
+ 44a:	28 1b       	sub	r18, r24
+ 44c:	39 0b       	sbc	r19, r25
+}
+
+/* 현재 시간과 노트의 시간 중 근접한 시간을 찾음. */
+short find_index_in_array(unsigned int now_time) {
+	for(short idx = 0; idx < 50; idx++) {
+		if(_abs_minus(now_time, correct_msec_time[idx]) <= tolerance_ms) {
+ 44e:	62 17       	cp	r22, r18
+ 450:	73 07       	cpc	r23, r19
+ 452:	40 f4       	brcc	.+16     	; 0x464 <find_index_in_array+0x3e>
+ 454:	4f 5f       	subi	r20, 0xFF	; 255
+ 456:	5f 4f       	sbci	r21, 0xFF	; 255
+	SPCR|=0x80;	// 0x80 = 0b10000000 -> ~0x10 = 0b11101111
+}
+
+/* 현재 시간과 노트의 시간 중 근접한 시간을 찾음. */
+short find_index_in_array(unsigned int now_time) {
+	for(short idx = 0; idx < 50; idx++) {
+ 458:	42 33       	cpi	r20, 0x32	; 50
+ 45a:	51 05       	cpc	r21, r1
+ 45c:	61 f7       	brne	.-40     	; 0x436 <find_index_in_array+0x10>
+		if(_abs_minus(now_time, correct_msec_time[idx]) <= tolerance_ms) {
+			return idx;
+		}
+	}
+	return -1;		// 너무 빠르거나 늦게 누르면 -1을 리턴함.
+ 45e:	8f ef       	ldi	r24, 0xFF	; 255
+ 460:	9f ef       	ldi	r25, 0xFF	; 255
+ 462:	08 95       	ret
+ 464:	84 2f       	mov	r24, r20
+ 466:	95 2f       	mov	r25, r21
+}
+ 468:	08 95       	ret
+
+0000046a <getScore>:
+
+/* 버튼 입력을 통해서 점수를 리턴함. */
+unsigned short getScore(unsigned char button_number, unsigned int time_msec) {
+ 46a:	cf 93       	push	r28
+	short now_index = 0;
+	// 2번 연속으로 눌렸는지 체크
+	if(_abs_minus(time_msec, (int)_msec_memory) < 50) {
+ 46c:	20 91 4a 01 	lds	r18, 0x014A	; 0x80014a <_msec_memory>
+ 470:	30 91 4b 01 	lds	r19, 0x014B	; 0x80014b <_msec_memory+0x1>
+	}
+	*/
+}
+
+unsigned int _abs_minus(int a, int b) {
+	if(a > b) {
+ 474:	26 17       	cp	r18, r22
+ 476:	37 07       	cpc	r19, r23
+ 478:	2c f4       	brge	.+10     	; 0x484 <getScore+0x1a>
+		return (a - b);
+ 47a:	ab 01       	movw	r20, r22
+ 47c:	42 1b       	sub	r20, r18
+ 47e:	53 0b       	sbc	r21, r19
+ 480:	9a 01       	movw	r18, r20
+ 482:	02 c0       	rjmp	.+4      	; 0x488 <getScore+0x1e>
+	} else {
+		return (b - a);
+ 484:	26 1b       	sub	r18, r22
+ 486:	37 0b       	sbc	r19, r23
+
+/* 버튼 입력을 통해서 점수를 리턴함. */
+unsigned short getScore(unsigned char button_number, unsigned int time_msec) {
+	short now_index = 0;
+	// 2번 연속으로 눌렸는지 체크
+	if(_abs_minus(time_msec, (int)_msec_memory) < 50) {
+ 488:	22 33       	cpi	r18, 0x32	; 50
+ 48a:	31 05       	cpc	r19, r1
+ 48c:	08 f1       	brcs	.+66     	; 0x4d0 <getScore+0x66>
+ 48e:	c8 2f       	mov	r28, r24
+		// 연속으로 눌려짐
+		return 0;
+	} else {
+		now_index = find_index_in_array(time_msec);
+ 490:	cb 01       	movw	r24, r22
+ 492:	c9 df       	rcall	.-110    	; 0x426 <find_index_in_array>
+		if(now_index == -1) {
+ 494:	8f 3f       	cpi	r24, 0xFF	; 255
+ 496:	5f ef       	ldi	r21, 0xFF	; 255
+ 498:	95 07       	cpc	r25, r21
+ 49a:	e9 f0       	breq	.+58     	; 0x4d6 <getScore+0x6c>
+			// tolerance 타이밍에 누르지 않으면 -1을 리턴함.
+			return 0;
+		} else {
+			if((button_number == correct_button[now_index])) {
+ 49c:	fc 01       	movw	r30, r24
+ 49e:	e0 5f       	subi	r30, 0xF0	; 240
+ 4a0:	fe 4f       	sbci	r31, 0xFE	; 254
+ 4a2:	20 81       	ld	r18, Z
+ 4a4:	2c 13       	cpse	r18, r28
+ 4a6:	0a c0       	rjmp	.+20     	; 0x4bc <getScore+0x52>
+				correct_msec_time[now_index] = 0;
+ 4a8:	88 0f       	add	r24, r24
+ 4aa:	99 1f       	adc	r25, r25
+ 4ac:	fc 01       	movw	r30, r24
+ 4ae:	e7 5a       	subi	r30, 0xA7	; 167
+ 4b0:	fe 4f       	sbci	r31, 0xFE	; 254
+ 4b2:	11 82       	std	Z+1, r1	; 0x01
+ 4b4:	10 82       	st	Z, r1
+				return 5;
+ 4b6:	85 e0       	ldi	r24, 0x05	; 5
+ 4b8:	90 e0       	ldi	r25, 0x00	; 0
+ 4ba:	0f c0       	rjmp	.+30     	; 0x4da <getScore+0x70>
+			} else {
+				correct_msec_time[now_index] = 0;
+ 4bc:	88 0f       	add	r24, r24
+ 4be:	99 1f       	adc	r25, r25
+ 4c0:	fc 01       	movw	r30, r24
+ 4c2:	e7 5a       	subi	r30, 0xA7	; 167
+ 4c4:	fe 4f       	sbci	r31, 0xFE	; 254
+ 4c6:	11 82       	std	Z+1, r1	; 0x01
+ 4c8:	10 82       	st	Z, r1
+				return 0;
+ 4ca:	80 e0       	ldi	r24, 0x00	; 0
+ 4cc:	90 e0       	ldi	r25, 0x00	; 0
+ 4ce:	05 c0       	rjmp	.+10     	; 0x4da <getScore+0x70>
+unsigned short getScore(unsigned char button_number, unsigned int time_msec) {
+	short now_index = 0;
+	// 2번 연속으로 눌렸는지 체크
+	if(_abs_minus(time_msec, (int)_msec_memory) < 50) {
+		// 연속으로 눌려짐
+		return 0;
+ 4d0:	80 e0       	ldi	r24, 0x00	; 0
+ 4d2:	90 e0       	ldi	r25, 0x00	; 0
+ 4d4:	02 c0       	rjmp	.+4      	; 0x4da <getScore+0x70>
+	} else {
+		now_index = find_index_in_array(time_msec);
+		if(now_index == -1) {
+			// tolerance 타이밍에 누르지 않으면 -1을 리턴함.
+			return 0;
+ 4d6:	80 e0       	ldi	r24, 0x00	; 0
+ 4d8:	90 e0       	ldi	r25, 0x00	; 0
+				correct_msec_time[now_index] = 0;
+				return 0;
+			}
+		}
+	}
+}
+ 4da:	cf 91       	pop	r28
+ 4dc:	08 95       	ret
+
+000004de <__vector_17>:
+
+SIGNAL(SPI_STC_vect) {
+ 4de:	1f 92       	push	r1
+ 4e0:	0f 92       	push	r0
+ 4e2:	0f b6       	in	r0, 0x3f	; 63
+ 4e4:	0f 92       	push	r0
+ 4e6:	11 24       	eor	r1, r1
+ 4e8:	8f 93       	push	r24
+	rx_buf=SPDR;
+ 4ea:	8f b1       	in	r24, 0x0f	; 15
+ 4ec:	80 93 58 01 	sts	0x0158, r24	; 0x800158 <rx_buf>
+	//SS_1;
+}
+ 4f0:	8f 91       	pop	r24
+ 4f2:	0f 90       	pop	r0
+ 4f4:	0f be       	out	0x3f, r0	; 63
+ 4f6:	0f 90       	pop	r0
+ 4f8:	1f 90       	pop	r1
+ 4fa:	18 95       	reti
+
+000004fc <__vector_1>:
+
+/* 인터럽트 버튼 0번 */
+ISR(INT0_vect) {
+ 4fc:	1f 92       	push	r1
+ 4fe:	0f 92       	push	r0
+ 500:	0f b6       	in	r0, 0x3f	; 63
+ 502:	0f 92       	push	r0
+ 504:	11 24       	eor	r1, r1
+ 506:	0b b6       	in	r0, 0x3b	; 59
+ 508:	0f 92       	push	r0
+ 50a:	2f 93       	push	r18
+ 50c:	3f 93       	push	r19
+ 50e:	4f 93       	push	r20
+ 510:	5f 93       	push	r21
+ 512:	6f 93       	push	r22
+ 514:	7f 93       	push	r23
+ 516:	8f 93       	push	r24
+ 518:	9f 93       	push	r25
+ 51a:	af 93       	push	r26
+ 51c:	bf 93       	push	r27
+ 51e:	ef 93       	push	r30
+ 520:	ff 93       	push	r31
+	int time_difference = _abs_minus(_menu_memory_msec, _menu_real_msec);
+ 522:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <__data_end>
+ 526:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <__data_end+0x1>
+ 52a:	20 91 48 01 	lds	r18, 0x0148	; 0x800148 <_menu_memory_msec>
+ 52e:	30 91 49 01 	lds	r19, 0x0149	; 0x800149 <_menu_memory_msec+0x1>
+	}
+	*/
+}
+
+unsigned int _abs_minus(int a, int b) {
+	if(a > b) {
+ 532:	82 17       	cp	r24, r18
+ 534:	93 07       	cpc	r25, r19
+ 536:	2c f4       	brge	.+10     	; 0x542 <__vector_1+0x46>
+		return (a - b);
+ 538:	a9 01       	movw	r20, r18
+ 53a:	48 1b       	sub	r20, r24
+ 53c:	59 0b       	sbc	r21, r25
+ 53e:	ca 01       	movw	r24, r20
+ 540:	02 c0       	rjmp	.+4      	; 0x546 <__vector_1+0x4a>
+	} else {
+		return (b - a);
+ 542:	82 1b       	sub	r24, r18
+ 544:	93 0b       	sbc	r25, r19
+}
+
+/* 인터럽트 버튼 0번 */
+ISR(INT0_vect) {
+	int time_difference = _abs_minus(_menu_memory_msec, _menu_real_msec);
+	if(time_difference > 100) {
+ 546:	85 36       	cpi	r24, 0x65	; 101
+ 548:	91 05       	cpc	r25, r1
+ 54a:	34 f1       	brlt	.+76     	; 0x598 <__vector_1+0x9c>
+		_menu_memory_msec = _menu_real_msec;
+ 54c:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <__data_end>
+ 550:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <__data_end+0x1>
+ 554:	90 93 49 01 	sts	0x0149, r25	; 0x800149 <_menu_memory_msec+0x1>
+ 558:	80 93 48 01 	sts	0x0148, r24	; 0x800148 <_menu_memory_msec>
+		if(master_mode == 2) {		// Game Mode
+ 55c:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 560:	82 30       	cpi	r24, 0x02	; 2
+ 562:	81 f4       	brne	.+32     	; 0x584 <__vector_1+0x88>
+			score = score + getScore(1, msec);		// 점수를 증가
+ 564:	60 91 50 01 	lds	r22, 0x0150	; 0x800150 <msec>
+ 568:	70 91 51 01 	lds	r23, 0x0151	; 0x800151 <msec+0x1>
+ 56c:	81 e0       	ldi	r24, 0x01	; 1
+ 56e:	7d df       	rcall	.-262    	; 0x46a <getScore>
+ 570:	20 91 4e 01 	lds	r18, 0x014E	; 0x80014e <score>
+ 574:	30 91 4f 01 	lds	r19, 0x014F	; 0x80014f <score+0x1>
+ 578:	82 0f       	add	r24, r18
+ 57a:	93 1f       	adc	r25, r19
+ 57c:	90 93 4f 01 	sts	0x014F, r25	; 0x80014f <score+0x1>
+ 580:	80 93 4e 01 	sts	0x014E, r24	; 0x80014e <score>
+		}
+		// 버튼이 잘 작동하는지 확인하기 위한 함수
+		if(master_mode == 1) { count = 1111; }
+ 584:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 588:	81 30       	cpi	r24, 0x01	; 1
+ 58a:	31 f4       	brne	.+12     	; 0x598 <__vector_1+0x9c>
+ 58c:	87 e5       	ldi	r24, 0x57	; 87
+ 58e:	94 e0       	ldi	r25, 0x04	; 4
+ 590:	90 93 45 01 	sts	0x0145, r25	; 0x800145 <count+0x1>
+ 594:	80 93 44 01 	sts	0x0144, r24	; 0x800144 <count>
+	}
+}
+ 598:	ff 91       	pop	r31
+ 59a:	ef 91       	pop	r30
+ 59c:	bf 91       	pop	r27
+ 59e:	af 91       	pop	r26
+ 5a0:	9f 91       	pop	r25
+ 5a2:	8f 91       	pop	r24
+ 5a4:	7f 91       	pop	r23
+ 5a6:	6f 91       	pop	r22
+ 5a8:	5f 91       	pop	r21
+ 5aa:	4f 91       	pop	r20
+ 5ac:	3f 91       	pop	r19
+ 5ae:	2f 91       	pop	r18
+ 5b0:	0f 90       	pop	r0
+ 5b2:	0b be       	out	0x3b, r0	; 59
+ 5b4:	0f 90       	pop	r0
+ 5b6:	0f be       	out	0x3f, r0	; 63
+ 5b8:	0f 90       	pop	r0
+ 5ba:	1f 90       	pop	r1
+ 5bc:	18 95       	reti
+
+000005be <__vector_2>:
+
+/* 인터럽트 버튼 1번 */
+ISR(INT1_vect) {
+ 5be:	1f 92       	push	r1
+ 5c0:	0f 92       	push	r0
+ 5c2:	0f b6       	in	r0, 0x3f	; 63
+ 5c4:	0f 92       	push	r0
+ 5c6:	11 24       	eor	r1, r1
+ 5c8:	0b b6       	in	r0, 0x3b	; 59
+ 5ca:	0f 92       	push	r0
+ 5cc:	2f 93       	push	r18
+ 5ce:	3f 93       	push	r19
+ 5d0:	4f 93       	push	r20
+ 5d2:	5f 93       	push	r21
+ 5d4:	6f 93       	push	r22
+ 5d6:	7f 93       	push	r23
+ 5d8:	8f 93       	push	r24
+ 5da:	9f 93       	push	r25
+ 5dc:	af 93       	push	r26
+ 5de:	bf 93       	push	r27
+ 5e0:	ef 93       	push	r30
+ 5e2:	ff 93       	push	r31
+	if((int)_abs_minus(_menu_memory_msec, _menu_real_msec) > 100) {
+ 5e4:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <__data_end>
+ 5e8:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <__data_end+0x1>
+ 5ec:	20 91 48 01 	lds	r18, 0x0148	; 0x800148 <_menu_memory_msec>
+ 5f0:	30 91 49 01 	lds	r19, 0x0149	; 0x800149 <_menu_memory_msec+0x1>
+	}
+	*/
+}
+
+unsigned int _abs_minus(int a, int b) {
+	if(a > b) {
+ 5f4:	82 17       	cp	r24, r18
+ 5f6:	93 07       	cpc	r25, r19
+ 5f8:	2c f4       	brge	.+10     	; 0x604 <__vector_2+0x46>
+		return (a - b);
+ 5fa:	a9 01       	movw	r20, r18
+ 5fc:	48 1b       	sub	r20, r24
+ 5fe:	59 0b       	sbc	r21, r25
+ 600:	ca 01       	movw	r24, r20
+ 602:	02 c0       	rjmp	.+4      	; 0x608 <__vector_2+0x4a>
+	} else {
+		return (b - a);
+ 604:	82 1b       	sub	r24, r18
+ 606:	93 0b       	sbc	r25, r19
+	}
+}
+
+/* 인터럽트 버튼 1번 */
+ISR(INT1_vect) {
+	if((int)_abs_minus(_menu_memory_msec, _menu_real_msec) > 100) {
+ 608:	85 36       	cpi	r24, 0x65	; 101
+ 60a:	91 05       	cpc	r25, r1
+ 60c:	2c f1       	brlt	.+74     	; 0x658 <__vector_2+0x9a>
+		_menu_memory_msec = _menu_real_msec;
+ 60e:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <__data_end>
+ 612:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <__data_end+0x1>
+ 616:	90 93 49 01 	sts	0x0149, r25	; 0x800149 <_menu_memory_msec+0x1>
+ 61a:	80 93 48 01 	sts	0x0148, r24	; 0x800148 <_menu_memory_msec>
+		if(master_mode == 2) {		// Game Mode
+ 61e:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 622:	82 30       	cpi	r24, 0x02	; 2
+ 624:	79 f4       	brne	.+30     	; 0x644 <__vector_2+0x86>
+			score = score + getScore(2, msec);
+ 626:	60 91 50 01 	lds	r22, 0x0150	; 0x800150 <msec>
+ 62a:	70 91 51 01 	lds	r23, 0x0151	; 0x800151 <msec+0x1>
+ 62e:	1d df       	rcall	.-454    	; 0x46a <getScore>
+ 630:	20 91 4e 01 	lds	r18, 0x014E	; 0x80014e <score>
+ 634:	30 91 4f 01 	lds	r19, 0x014F	; 0x80014f <score+0x1>
+ 638:	82 0f       	add	r24, r18
+ 63a:	93 1f       	adc	r25, r19
+ 63c:	90 93 4f 01 	sts	0x014F, r25	; 0x80014f <score+0x1>
+ 640:	80 93 4e 01 	sts	0x014E, r24	; 0x80014e <score>
+		}
+		// 버튼이 잘 작동하는지 확인하기 위한 함수
+		if(master_mode == 1) { count = 2222; }
+ 644:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 648:	81 30       	cpi	r24, 0x01	; 1
+ 64a:	31 f4       	brne	.+12     	; 0x658 <__vector_2+0x9a>
+ 64c:	8e ea       	ldi	r24, 0xAE	; 174
+ 64e:	98 e0       	ldi	r25, 0x08	; 8
+ 650:	90 93 45 01 	sts	0x0145, r25	; 0x800145 <count+0x1>
+ 654:	80 93 44 01 	sts	0x0144, r24	; 0x800144 <count>
+	}
+}
+ 658:	ff 91       	pop	r31
+ 65a:	ef 91       	pop	r30
+ 65c:	bf 91       	pop	r27
+ 65e:	af 91       	pop	r26
+ 660:	9f 91       	pop	r25
+ 662:	8f 91       	pop	r24
+ 664:	7f 91       	pop	r23
+ 666:	6f 91       	pop	r22
+ 668:	5f 91       	pop	r21
+ 66a:	4f 91       	pop	r20
+ 66c:	3f 91       	pop	r19
+ 66e:	2f 91       	pop	r18
+ 670:	0f 90       	pop	r0
+ 672:	0b be       	out	0x3b, r0	; 59
+ 674:	0f 90       	pop	r0
+ 676:	0f be       	out	0x3f, r0	; 63
+ 678:	0f 90       	pop	r0
+ 67a:	1f 90       	pop	r1
+ 67c:	18 95       	reti
+
+0000067e <__vector_3>:
+
+/* 인터럽트 버튼 2번 */
+ISR(INT2_vect) {
+ 67e:	1f 92       	push	r1
+ 680:	0f 92       	push	r0
+ 682:	0f b6       	in	r0, 0x3f	; 63
+ 684:	0f 92       	push	r0
+ 686:	11 24       	eor	r1, r1
+ 688:	0b b6       	in	r0, 0x3b	; 59
+ 68a:	0f 92       	push	r0
+ 68c:	2f 93       	push	r18
+ 68e:	3f 93       	push	r19
+ 690:	4f 93       	push	r20
+ 692:	5f 93       	push	r21
+ 694:	6f 93       	push	r22
+ 696:	7f 93       	push	r23
+ 698:	8f 93       	push	r24
+ 69a:	9f 93       	push	r25
+ 69c:	af 93       	push	r26
+ 69e:	bf 93       	push	r27
+ 6a0:	ef 93       	push	r30
+ 6a2:	ff 93       	push	r31
+	if((int)_abs_minus(_menu_memory_msec, _menu_real_msec) > 100) {
+ 6a4:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <__data_end>
+ 6a8:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <__data_end+0x1>
+ 6ac:	20 91 48 01 	lds	r18, 0x0148	; 0x800148 <_menu_memory_msec>
+ 6b0:	30 91 49 01 	lds	r19, 0x0149	; 0x800149 <_menu_memory_msec+0x1>
+	}
+	*/
+}
+
+unsigned int _abs_minus(int a, int b) {
+	if(a > b) {
+ 6b4:	82 17       	cp	r24, r18
+ 6b6:	93 07       	cpc	r25, r19
+ 6b8:	2c f4       	brge	.+10     	; 0x6c4 <__vector_3+0x46>
+		return (a - b);
+ 6ba:	a9 01       	movw	r20, r18
+ 6bc:	48 1b       	sub	r20, r24
+ 6be:	59 0b       	sbc	r21, r25
+ 6c0:	ca 01       	movw	r24, r20
+ 6c2:	02 c0       	rjmp	.+4      	; 0x6c8 <__vector_3+0x4a>
+	} else {
+		return (b - a);
+ 6c4:	82 1b       	sub	r24, r18
+ 6c6:	93 0b       	sbc	r25, r19
+	}
+}
+
+/* 인터럽트 버튼 2번 */
+ISR(INT2_vect) {
+	if((int)_abs_minus(_menu_memory_msec, _menu_real_msec) > 100) {
+ 6c8:	85 36       	cpi	r24, 0x65	; 101
+ 6ca:	91 05       	cpc	r25, r1
+ 6cc:	34 f1       	brlt	.+76     	; 0x71a <__vector_3+0x9c>
+		_menu_memory_msec = _menu_real_msec;
+ 6ce:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <__data_end>
+ 6d2:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <__data_end+0x1>
+ 6d6:	90 93 49 01 	sts	0x0149, r25	; 0x800149 <_menu_memory_msec+0x1>
+ 6da:	80 93 48 01 	sts	0x0148, r24	; 0x800148 <_menu_memory_msec>
+		if(master_mode == 2) {		// Game Mode
+ 6de:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 6e2:	82 30       	cpi	r24, 0x02	; 2
+ 6e4:	81 f4       	brne	.+32     	; 0x706 <__vector_3+0x88>
+		score = score + getScore(3, msec);
+ 6e6:	60 91 50 01 	lds	r22, 0x0150	; 0x800150 <msec>
+ 6ea:	70 91 51 01 	lds	r23, 0x0151	; 0x800151 <msec+0x1>
+ 6ee:	83 e0       	ldi	r24, 0x03	; 3
+ 6f0:	bc de       	rcall	.-648    	; 0x46a <getScore>
+ 6f2:	20 91 4e 01 	lds	r18, 0x014E	; 0x80014e <score>
+ 6f6:	30 91 4f 01 	lds	r19, 0x014F	; 0x80014f <score+0x1>
+ 6fa:	82 0f       	add	r24, r18
+ 6fc:	93 1f       	adc	r25, r19
+ 6fe:	90 93 4f 01 	sts	0x014F, r25	; 0x80014f <score+0x1>
+ 702:	80 93 4e 01 	sts	0x014E, r24	; 0x80014e <score>
+		}
+		// 버튼이 잘 작동하는지 확인하기 위한 함수
+		if(master_mode == 1) { count = 3333; }
+ 706:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 70a:	81 30       	cpi	r24, 0x01	; 1
+ 70c:	31 f4       	brne	.+12     	; 0x71a <__vector_3+0x9c>
+ 70e:	85 e0       	ldi	r24, 0x05	; 5
+ 710:	9d e0       	ldi	r25, 0x0D	; 13
+ 712:	90 93 45 01 	sts	0x0145, r25	; 0x800145 <count+0x1>
+ 716:	80 93 44 01 	sts	0x0144, r24	; 0x800144 <count>
+	}
+}
+ 71a:	ff 91       	pop	r31
+ 71c:	ef 91       	pop	r30
+ 71e:	bf 91       	pop	r27
+ 720:	af 91       	pop	r26
+ 722:	9f 91       	pop	r25
+ 724:	8f 91       	pop	r24
+ 726:	7f 91       	pop	r23
+ 728:	6f 91       	pop	r22
+ 72a:	5f 91       	pop	r21
+ 72c:	4f 91       	pop	r20
+ 72e:	3f 91       	pop	r19
+ 730:	2f 91       	pop	r18
+ 732:	0f 90       	pop	r0
+ 734:	0b be       	out	0x3b, r0	; 59
+ 736:	0f 90       	pop	r0
+ 738:	0f be       	out	0x3f, r0	; 63
+ 73a:	0f 90       	pop	r0
+ 73c:	1f 90       	pop	r1
+ 73e:	18 95       	reti
+
+00000740 <__vector_4>:
+
+/* 인터럽트 버튼 3번 */
+ISR(INT3_vect) {
+ 740:	1f 92       	push	r1
+ 742:	0f 92       	push	r0
+ 744:	0f b6       	in	r0, 0x3f	; 63
+ 746:	0f 92       	push	r0
+ 748:	11 24       	eor	r1, r1
+ 74a:	0b b6       	in	r0, 0x3b	; 59
+ 74c:	0f 92       	push	r0
+ 74e:	2f 93       	push	r18
+ 750:	3f 93       	push	r19
+ 752:	4f 93       	push	r20
+ 754:	5f 93       	push	r21
+ 756:	6f 93       	push	r22
+ 758:	7f 93       	push	r23
+ 75a:	8f 93       	push	r24
+ 75c:	9f 93       	push	r25
+ 75e:	af 93       	push	r26
+ 760:	bf 93       	push	r27
+ 762:	ef 93       	push	r30
+ 764:	ff 93       	push	r31
+	if((int)_abs_minus(_menu_memory_msec, _menu_real_msec) > 100) {
+ 766:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <__data_end>
+ 76a:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <__data_end+0x1>
+ 76e:	20 91 48 01 	lds	r18, 0x0148	; 0x800148 <_menu_memory_msec>
+ 772:	30 91 49 01 	lds	r19, 0x0149	; 0x800149 <_menu_memory_msec+0x1>
+	}
+	*/
+}
+
+unsigned int _abs_minus(int a, int b) {
+	if(a > b) {
+ 776:	82 17       	cp	r24, r18
+ 778:	93 07       	cpc	r25, r19
+ 77a:	2c f4       	brge	.+10     	; 0x786 <__vector_4+0x46>
+		return (a - b);
+ 77c:	a9 01       	movw	r20, r18
+ 77e:	48 1b       	sub	r20, r24
+ 780:	59 0b       	sbc	r21, r25
+ 782:	ca 01       	movw	r24, r20
+ 784:	02 c0       	rjmp	.+4      	; 0x78a <__vector_4+0x4a>
+	} else {
+		return (b - a);
+ 786:	82 1b       	sub	r24, r18
+ 788:	93 0b       	sbc	r25, r19
+	}
+}
+
+/* 인터럽트 버튼 3번 */
+ISR(INT3_vect) {
+	if((int)_abs_minus(_menu_memory_msec, _menu_real_msec) > 100) {
+ 78a:	85 36       	cpi	r24, 0x65	; 101
+ 78c:	91 05       	cpc	r25, r1
+ 78e:	34 f1       	brlt	.+76     	; 0x7dc <__vector_4+0x9c>
+		_menu_memory_msec = _menu_real_msec;
+ 790:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <__data_end>
+ 794:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <__data_end+0x1>
+ 798:	90 93 49 01 	sts	0x0149, r25	; 0x800149 <_menu_memory_msec+0x1>
+ 79c:	80 93 48 01 	sts	0x0148, r24	; 0x800148 <_menu_memory_msec>
+		if(master_mode == 2) {		// Game Mode
+ 7a0:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 7a4:	82 30       	cpi	r24, 0x02	; 2
+ 7a6:	81 f4       	brne	.+32     	; 0x7c8 <__vector_4+0x88>
+			score = score + getScore(4, msec);
+ 7a8:	60 91 50 01 	lds	r22, 0x0150	; 0x800150 <msec>
+ 7ac:	70 91 51 01 	lds	r23, 0x0151	; 0x800151 <msec+0x1>
+ 7b0:	84 e0       	ldi	r24, 0x04	; 4
+ 7b2:	5b de       	rcall	.-842    	; 0x46a <getScore>
+ 7b4:	20 91 4e 01 	lds	r18, 0x014E	; 0x80014e <score>
+ 7b8:	30 91 4f 01 	lds	r19, 0x014F	; 0x80014f <score+0x1>
+ 7bc:	82 0f       	add	r24, r18
+ 7be:	93 1f       	adc	r25, r19
+ 7c0:	90 93 4f 01 	sts	0x014F, r25	; 0x80014f <score+0x1>
+ 7c4:	80 93 4e 01 	sts	0x014E, r24	; 0x80014e <score>
+		}
+		// 버튼이 잘 작동하는지 확인하기 위한 함수
+		if(master_mode == 1) { count = 4444; }
+ 7c8:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 7cc:	81 30       	cpi	r24, 0x01	; 1
+ 7ce:	31 f4       	brne	.+12     	; 0x7dc <__vector_4+0x9c>
+ 7d0:	8c e5       	ldi	r24, 0x5C	; 92
+ 7d2:	91 e1       	ldi	r25, 0x11	; 17
+ 7d4:	90 93 45 01 	sts	0x0145, r25	; 0x800145 <count+0x1>
+ 7d8:	80 93 44 01 	sts	0x0144, r24	; 0x800144 <count>
+	}
+}
+ 7dc:	ff 91       	pop	r31
+ 7de:	ef 91       	pop	r30
+ 7e0:	bf 91       	pop	r27
+ 7e2:	af 91       	pop	r26
+ 7e4:	9f 91       	pop	r25
+ 7e6:	8f 91       	pop	r24
+ 7e8:	7f 91       	pop	r23
+ 7ea:	6f 91       	pop	r22
+ 7ec:	5f 91       	pop	r21
+ 7ee:	4f 91       	pop	r20
+ 7f0:	3f 91       	pop	r19
+ 7f2:	2f 91       	pop	r18
+ 7f4:	0f 90       	pop	r0
+ 7f6:	0b be       	out	0x3b, r0	; 59
+ 7f8:	0f 90       	pop	r0
+ 7fa:	0f be       	out	0x3f, r0	; 63
+ 7fc:	0f 90       	pop	r0
+ 7fe:	1f 90       	pop	r1
+ 800:	18 95       	reti
+
+00000802 <__vector_5>:
+
+/* Master ATmega128 우상단 버튼 인터럽트 */
+/* Menu Mode에서 곡번호를 선택하는 기능을 구현 */
+// 오른쪽 아래버튼 (SW1) 누르면 숫자 올라감
+SIGNAL(INT4_vect) {
+ 802:	1f 92       	push	r1
+ 804:	0f 92       	push	r0
+ 806:	0f b6       	in	r0, 0x3f	; 63
+ 808:	0f 92       	push	r0
+ 80a:	11 24       	eor	r1, r1
+ 80c:	2f 93       	push	r18
+ 80e:	3f 93       	push	r19
+ 810:	8f 93       	push	r24
+ 812:	9f 93       	push	r25
+	count++;
+ 814:	80 91 44 01 	lds	r24, 0x0144	; 0x800144 <count>
+ 818:	90 91 45 01 	lds	r25, 0x0145	; 0x800145 <count+0x1>
+ 81c:	01 96       	adiw	r24, 0x01	; 1
+ 81e:	90 93 45 01 	sts	0x0145, r25	; 0x800145 <count+0x1>
+ 822:	80 93 44 01 	sts	0x0144, r24	; 0x800144 <count>
+	if(count > total_number_of_game) {
+ 826:	20 91 43 01 	lds	r18, 0x0143	; 0x800143 <total_number_of_game>
+ 82a:	30 e0       	ldi	r19, 0x00	; 0
+ 82c:	28 17       	cp	r18, r24
+ 82e:	39 07       	cpc	r19, r25
+ 830:	30 f4       	brcc	.+12     	; 0x83e <__vector_5+0x3c>
+		count = 1;
+ 832:	81 e0       	ldi	r24, 0x01	; 1
+ 834:	90 e0       	ldi	r25, 0x00	; 0
+ 836:	90 93 45 01 	sts	0x0145, r25	; 0x800145 <count+0x1>
+ 83a:	80 93 44 01 	sts	0x0144, r24	; 0x800144 <count>
+ 83e:	2f e1       	ldi	r18, 0x1F	; 31
+ 840:	81 ea       	ldi	r24, 0xA1	; 161
+ 842:	97 e0       	ldi	r25, 0x07	; 7
+ 844:	21 50       	subi	r18, 0x01	; 1
+ 846:	80 40       	sbci	r24, 0x00	; 0
+ 848:	90 40       	sbci	r25, 0x00	; 0
+ 84a:	e1 f7       	brne	.-8      	; 0x844 <__vector_5+0x42>
+ 84c:	00 c0       	rjmp	.+0      	; 0x84e <__vector_5+0x4c>
+ 84e:	00 00       	nop
+	}
+	_delay_ms(2500);
+}
+ 850:	9f 91       	pop	r25
+ 852:	8f 91       	pop	r24
+ 854:	3f 91       	pop	r19
+ 856:	2f 91       	pop	r18
+ 858:	0f 90       	pop	r0
+ 85a:	0f be       	out	0x3f, r0	; 63
+ 85c:	0f 90       	pop	r0
+ 85e:	1f 90       	pop	r1
+ 860:	18 95       	reti
+
+00000862 <__vector_6>:
+
+
+/* Master ATmega128 우하단 버튼 인터럽트 */
+/* Menu Mode에서 Game Mode로, 게임을 실행하는 기능 구현 */
+// 오른쪽 아래버튼 (SW2) 누르면 데이터 보냄
+SIGNAL(INT5_vect) {
+ 862:	1f 92       	push	r1
+ 864:	0f 92       	push	r0
+ 866:	0f b6       	in	r0, 0x3f	; 63
+ 868:	0f 92       	push	r0
+ 86a:	11 24       	eor	r1, r1
+ 86c:	0b b6       	in	r0, 0x3b	; 59
+ 86e:	0f 92       	push	r0
+ 870:	2f 93       	push	r18
+ 872:	3f 93       	push	r19
+ 874:	4f 93       	push	r20
+ 876:	5f 93       	push	r21
+ 878:	6f 93       	push	r22
+ 87a:	7f 93       	push	r23
+ 87c:	8f 93       	push	r24
+ 87e:	9f 93       	push	r25
+ 880:	af 93       	push	r26
+ 882:	bf 93       	push	r27
+ 884:	ef 93       	push	r30
+ 886:	ff 93       	push	r31
+	if(_abs_minus(msec, _msec_memory) < 400) {
+ 888:	80 91 4a 01 	lds	r24, 0x014A	; 0x80014a <_msec_memory>
+ 88c:	90 91 4b 01 	lds	r25, 0x014B	; 0x80014b <_msec_memory+0x1>
+ 890:	20 91 50 01 	lds	r18, 0x0150	; 0x800150 <msec>
+ 894:	30 91 51 01 	lds	r19, 0x0151	; 0x800151 <msec+0x1>
+	}
+	*/
+}
+
+unsigned int _abs_minus(int a, int b) {
+	if(a > b) {
+ 898:	82 17       	cp	r24, r18
+ 89a:	93 07       	cpc	r25, r19
+ 89c:	2c f4       	brge	.+10     	; 0x8a8 <__vector_6+0x46>
+		return (a - b);
+ 89e:	a9 01       	movw	r20, r18
+ 8a0:	48 1b       	sub	r20, r24
+ 8a2:	59 0b       	sbc	r21, r25
+ 8a4:	ca 01       	movw	r24, r20
+ 8a6:	02 c0       	rjmp	.+4      	; 0x8ac <__vector_6+0x4a>
+	} else {
+		return (b - a);
+ 8a8:	82 1b       	sub	r24, r18
+ 8aa:	93 0b       	sbc	r25, r19
+
+/* Master ATmega128 우하단 버튼 인터럽트 */
+/* Menu Mode에서 Game Mode로, 게임을 실행하는 기능 구현 */
+// 오른쪽 아래버튼 (SW2) 누르면 데이터 보냄
+SIGNAL(INT5_vect) {
+	if(_abs_minus(msec, _msec_memory) < 400) {
+ 8ac:	80 39       	cpi	r24, 0x90	; 144
+ 8ae:	91 40       	sbci	r25, 0x01	; 1
+ 8b0:	a8 f0       	brcs	.+42     	; 0x8dc <__vector_6+0x7a>
+		// 2번 눌러진거임.
+	} else {
+		// Change Master Mode
+		switch(master_mode) {
+ 8b2:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 8b6:	81 30       	cpi	r24, 0x01	; 1
+ 8b8:	19 f0       	breq	.+6      	; 0x8c0 <__vector_6+0x5e>
+ 8ba:	82 30       	cpi	r24, 0x02	; 2
+ 8bc:	49 f0       	breq	.+18     	; 0x8d0 <__vector_6+0x6e>
+ 8be:	0e c0       	rjmp	.+28     	; 0x8dc <__vector_6+0x7a>
+			case 1:	// Game Start
+				master_mode = 2;
+ 8c0:	82 e0       	ldi	r24, 0x02	; 2
+ 8c2:	80 93 42 01 	sts	0x0142, r24	; 0x800142 <master_mode>
+				initialize_variables();
+ 8c6:	82 dd       	rcall	.-1276   	; 0x3cc <initialize_variables>
+				SPI_TX(count);	// 게임 번호를 Slave한테 보냄. (게임 시작하라고)
+ 8c8:	80 91 44 01 	lds	r24, 0x0144	; 0x800144 <count>
+ 8cc:	a5 dd       	rcall	.-1206   	; 0x418 <SPI_TX>
+				break;
+ 8ce:	06 c0       	rjmp	.+12     	; 0x8dc <__vector_6+0x7a>
+			case 2:	// Game End;
+				master_mode = 1;
+ 8d0:	81 e0       	ldi	r24, 0x01	; 1
+ 8d2:	80 93 42 01 	sts	0x0142, r24	; 0x800142 <master_mode>
+				initialize_variables();
+				SPI_TX(404);	// End game
+ 8d6:	7a dd       	rcall	.-1292   	; 0x3cc <initialize_variables>
+ 8d8:	84 e9       	ldi	r24, 0x94	; 148
+ 8da:	9e dd       	rcall	.-1220   	; 0x418 <SPI_TX>
+				break;
+		}
+	}
+}
+ 8dc:	ff 91       	pop	r31
+ 8de:	ef 91       	pop	r30
+ 8e0:	bf 91       	pop	r27
+ 8e2:	af 91       	pop	r26
+ 8e4:	9f 91       	pop	r25
+ 8e6:	8f 91       	pop	r24
+ 8e8:	7f 91       	pop	r23
+ 8ea:	6f 91       	pop	r22
+ 8ec:	5f 91       	pop	r21
+ 8ee:	4f 91       	pop	r20
+ 8f0:	3f 91       	pop	r19
+ 8f2:	2f 91       	pop	r18
+ 8f4:	0f 90       	pop	r0
+ 8f6:	0b be       	out	0x3b, r0	; 59
+ 8f8:	0f 90       	pop	r0
+ 8fa:	0f be       	out	0x3f, r0	; 63
+ 8fc:	0f 90       	pop	r0
+ 8fe:	1f 90       	pop	r1
+ 900:	18 95       	reti
+
+00000902 <main>:
+
+int main(){
+	
+	// Atmega 오른쪽 버튼
+	DDRE = 0b11001111; // INT4, 5 
+ 902:	8f ec       	ldi	r24, 0xCF	; 207
+ 904:	82 b9       	out	0x02, r24	; 2
+	
+	// 스위치 4개
+	DDRD = 0b11110000;
+ 906:	80 ef       	ldi	r24, 0xF0	; 240
+ 908:	81 bb       	out	0x11, r24	; 17
+	
+	EICRA = 0xaa; //falling edge
+ 90a:	8a ea       	ldi	r24, 0xAA	; 170
+ 90c:	80 93 6a 00 	sts	0x006A, r24	; 0x80006a <__TEXT_REGION_LENGTH__+0x7e006a>
+	EICRB = 0xaa; //falling edge
+ 910:	8a bf       	out	0x3a, r24	; 58
+	EIMSK = 0b00111111; //interrupt en
+ 912:	8f e3       	ldi	r24, 0x3F	; 63
+ 914:	89 bf       	out	0x39, r24	; 57
+	
+	DDRA = 0xFF;	// 0x80 = 0b11111111
+ 916:	8f ef       	ldi	r24, 0xFF	; 255
+ 918:	8a bb       	out	0x1a, r24	; 26
+	SPI_Masterinit();
+ 91a:	76 dd       	rcall	.-1300   	; 0x408 <SPI_Masterinit>
+	sei();
+	
+	// Initialize : Seung-Rok Baek
+	initialize_FND();
+ 91c:	78 94       	sei
+	initialize_variables();
+ 91e:	d4 db       	rcall	.-2136   	; 0xc8 <initialize_FND>
+ 920:	55 dd       	rcall	.-1366   	; 0x3cc <initialize_variables>
+	
+	while(1) {
+		switch(master_mode) {
+ 922:	80 91 42 01 	lds	r24, 0x0142	; 0x800142 <master_mode>
+ 926:	81 30       	cpi	r24, 0x01	; 1
+ 928:	19 f0       	breq	.+6      	; 0x930 <main+0x2e>
+ 92a:	82 30       	cpi	r24, 0x02	; 2
+ 92c:	39 f0       	breq	.+14     	; 0x93c <main+0x3a>
+ 92e:	0b c0       	rjmp	.+22     	; 0x946 <main+0x44>
+			case 1:		// Menu Mode
+				FND_show_number(count);
+ 930:	80 91 44 01 	lds	r24, 0x0144	; 0x800144 <count>
+ 934:	90 91 45 01 	lds	r25, 0x0145	; 0x800145 <count+0x1>
+ 938:	d4 db       	rcall	.-2136   	; 0xe2 <FND_show_number>
+				break;
+ 93a:	05 c0       	rjmp	.+10     	; 0x946 <main+0x44>
+			case 2:		// Game Mode
+				FND_show_number((int)score);
+ 93c:	80 91 4e 01 	lds	r24, 0x014E	; 0x80014e <score>
+ 940:	90 91 4f 01 	lds	r25, 0x014F	; 0x80014f <score+0x1>
+ 944:	ce db       	rcall	.-2148   	; 0xe2 <FND_show_number>
+				break;
+		}
+		msec = msec + 8;
+ 946:	80 91 50 01 	lds	r24, 0x0150	; 0x800150 <msec>
+ 94a:	90 91 51 01 	lds	r25, 0x0151	; 0x800151 <msec+0x1>
+ 94e:	9c 01       	movw	r18, r24
+ 950:	28 5f       	subi	r18, 0xF8	; 248
+ 952:	3f 4f       	sbci	r19, 0xFF	; 255
+ 954:	30 93 51 01 	sts	0x0151, r19	; 0x800151 <msec+0x1>
+ 958:	20 93 50 01 	sts	0x0150, r18	; 0x800150 <msec>
+		_menu_real_msec = msec + 8;
+ 95c:	40 96       	adiw	r24, 0x10	; 16
+ 95e:	90 93 47 01 	sts	0x0147, r25	; 0x800147 <__data_end+0x1>
+ 962:	80 93 46 01 	sts	0x0146, r24	; 0x800146 <__data_end>
+	}
+ 966:	dd cf       	rjmp	.-70     	; 0x922 <main+0x20>
+
+00000968 <__umulhisi3>:
+ 968:	a2 9f       	mul	r26, r18
+ 96a:	b0 01       	movw	r22, r0
+ 96c:	b3 9f       	mul	r27, r19
+ 96e:	c0 01       	movw	r24, r0
+ 970:	a3 9f       	mul	r26, r19
+ 972:	70 0d       	add	r23, r0
+ 974:	81 1d       	adc	r24, r1
+ 976:	11 24       	eor	r1, r1
+ 978:	91 1d       	adc	r25, r1
+ 97a:	b2 9f       	mul	r27, r18
+ 97c:	70 0d       	add	r23, r0
+ 97e:	81 1d       	adc	r24, r1
+ 980:	11 24       	eor	r1, r1
+ 982:	91 1d       	adc	r25, r1
+ 984:	08 95       	ret
+
+00000986 <_exit>:
+ 986:	f8 94       	cli
+
+00000988 <__stop_program>:
+ 988:	ff cf       	rjmp	.-2      	; 0x988 <__stop_program>
